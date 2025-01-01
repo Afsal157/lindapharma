@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linda Pharmaceuticals</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="flex justify-around items-center p-3">
+        <div>
+            <img src="./images/Linda_pharma-logo.jpg" alt="" class="h-14">
+        </div>
+        <!-- Navigation for Large Screens -->
+        <div class="max-md:hidden text-blue-500 text-">
+            <a href="#aboutUs" class="mr-3 hover:text-red-600 underline">About Us</a>
+            <a href="#products" class="mr-3 hover:text-red-600 underline">Our Products</a>
+            <a href="#contact" class="mr-3 hover:text-red-600 underline">Contact Us</a>
+        </div>
+        <!-- Toggle Button for Sidebar -->  
+        <div class="md:hidden">
+            <button id="menuButton" class="text-blue-500 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed z-50 top-0 right-0 w-64 h-full bg-gray-900 text-white transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex items-center justify-between p-4 bg-gray-800">
+            <h1 class="text-xl font-bold">Navigation</h1>
+            <button id="closeButton" class="text-gray-400 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="mt-4">
+            <a href="#aboutUs" id="link1" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">About Us</a>
+            <a href="#products" id="link2" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">Our Products</a>
+            <a href="#contact" id="link3" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="bg-[url('/images/tablet-bg.png')] h-screen bg-center bg-cover flex items-center justify-center max-sm:bg-bottom">
+        <!-- Card Section -->
+        <div class="bg-gradient-to-br from-yellow-200 via-yellow-300 to-yellow-500 h-4/6 w-96 max-md:w-80 ml-4 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <!-- Title -->
+            <h2 class="text-4xl font-bold uppercase text-center mt-6 pb-4 border-b-4 border-red-500 tracking-wide text-gray-800 max-md:text-3xl ">
+                Linda <br> Pharmaceuticals
+            </h2>
+    
+            <!-- Description -->
+            <p class="text-center text-gray-700 mt-4 px-4">
+                Your trusted partner in health and wellness. Discover the finest quality tablets and capsules for a better tomorrow.
+            </p>
+    
+            <!-- Animated Capsules/Tablet Section -->
+            <div class="relative flex justify-center mt-8 space-x-6">
+                <!-- Capsule 1 -->
+                <div class="relative w-16 h-8 bg-red-400 rounded-full shadow-lg rotate-12 animate-bounce"></div>
+                <!-- Tablet -->
+                <div class="relative w-12 h-12 bg-gray-300 rounded-full shadow-lg animate-pulse"></div>
+                <!-- Capsule 2 -->
+                <div class="relative w-16 h-8 bg-blue-400 rounded-full shadow-lg -rotate-12 animate-bounce delay-150"></div>
+                
+            </div>
+    
+            <!-- Call-to-Action -->
+            <div class="mt-10 flex justify-center">
+                <a href="#products" class="bg-red-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-red-600 transition-all">
+                    Explore Products
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+<div id="aboutUs" class="bg-gray-50 py-16 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold text-blue-600 mb-6">About Us</h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            At Linda Pharmaceuticals, we are dedicated to improving the health and well-being of individuals worldwide. With years of expertise in the pharmaceutical industry, we strive to provide high-quality, affordable medicines to meet the needs of our diverse customer base.
+        </p>
+        
+        <!-- <div class="flex justify-center mb-12">
+            <img src="./images/pharmaceutical-lab.jpg" alt="Pharmaceutical Lab" class="rounded-lg shadow-xl w-full max-w-2xl">
+        </div> -->
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Mission -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                <h3 class="text-xl font-semibold text-blue-500 mb-4">Our Mission</h3>
+                <p class="text-gray-700">
+                    To enhance global health by providing high-quality and scientifically advanced pharmaceutical products that make a positive impact on people's lives. Our mission is to bring accessible healthcare to everyone.
+                </p>
+            </div>
+
+            <!-- Vision -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                <h3 class="text-xl font-semibold text-blue-500 mb-4">Our Vision</h3>
+                <p class="text-gray-700">
+                    To be a leader in the pharmaceutical industry, delivering innovative treatments, and shaping the future of healthcare with a commitment to integrity, excellence, and sustainability.
+                </p>
+            </div>
+
+            <!-- Values -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                <h3 class="text-xl font-semibold text-blue-500 mb-4">Our Values</h3>
+                <ul class="text-gray-700">
+                    <li>Integrity: We act with honesty and transparency in everything we do.</li>
+                    <li>Quality: We are committed to excellence in our products and services.</li>
+                    <li>Innovation: We constantly seek new solutions to improve health outcomes.</li>
+                    <li>Customer Focus: We prioritize the needs and safety of our customers above all.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mt-12">
+            <p class="text-lg text-gray-700">
+                With cutting-edge research and development, stringent quality control measures, and a customer-first approach, Linda Pharmaceuticals stands at the forefront of the healthcare industry, committed to providing trusted solutions for a healthier tomorrow.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="bg-gray-100 py-12" id="products">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Title -->
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-10">Our Premium Products</h2>
+    
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Item -->
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-1 LIN-M Carton & Foil.jpg" alt="Product 1" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">LIN-M</h3>
+                            <p class="text-gray-600 mt-2">Montelukast with Levocetirizine Tablets IP</p>
+                        </div>
+                    </div>
+                    <!-- Overlay Button
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <a href="#" class="text-white bg-red-500 px-4 py-2 rounded-full hover:bg-red-600 transition">View Details</a>
+                    </div> -->
+                </div>
+    
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-2 Role-D Carton & Foil.jpg" alt="Product 2" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Role-D</h3>
+                            <p class="text-gray-600 mt-2">Rabeprazole and Domeperidone (SR) Capsules</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-3 2 FM D.jpg" alt="Product 3" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">FMD</h3>
+                            <p class="text-gray-600 mt-2">Soft Gelatin Capsules</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-4.jpg" alt="Product 3" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Selkesh-PM</h3>
+                            <p class="text-gray-600 mt-2">Gastro Resistant Perpermint Oil</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-Final-5.jpg" alt="Product 3" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Colam-Plus</h3>
+                            <p class="text-gray-600 mt-2">Softgel Tablets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-Final-6.jpg" alt="Product 3" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Quikmor SP</h3>
+                            <p class="text-gray-600 mt-2">Tablets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-Final-7.jpg" alt="Product 3" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Aplomox-CV 625 LB</h3>
+                            <p class="text-gray-600 mt-2">Tablets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform group-hover:scale-105">
+                        <img src="./images/Prod-Final-8.jpg" alt="Product 3" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Carovita-D3</h3>
+                            <p class="text-gray-600 mt-2">Softgel Capsules</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+<div class="bg-gray-900 text-white py-12" id="contact">
+    <div class="max-w-5xl mx-auto px-6">
+        <!-- Title -->
+        <h2 class="text-4xl font-bold text-center mb-8 text-yellow-400">Contact Us</h2>
+
+        <!-- Contact Details -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Left Section: Contact Numbers -->
+            <div class="flex flex-col space-y-4">
+                <h3 class="text-2xl font-semibold">Get in Touch</h3>
+                <p>
+                    <span class="font-bold">Contact:</span> 
+                    <span class="block">88255 07105</span>
+                    <span class="block">96004 42246</span>
+                </p>
+                <p>
+                    <span class="font-bold">Email:</span> 
+                    <a href="mailto:lindapharmaceutical@gmail.com" class="text-yellow-400 hover:underline">lindapharmaceutical@gmail.com</a>
+                </p>
+                <img src="./images/logo-favicon.jpg" class="w-28" alt="">
+            </div>
+
+            <!-- Right Section: Address -->
+            <div class="flex flex-col space-y-4">
+                <h3 class="text-2xl font-semibold">Visit Us</h3>
+                <p>
+                    <span class="font-bold">Address:</span> 
+                    Keerthi Layout, Chandhapura,<br>Bangalore 99
+                </p>
+                <iframe 
+                    class="w-full h-48 rounded-md shadow-md" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97253.06554371658!2d77.60978010820312!3d12.819871328313406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70144c9c5171%3A0x643ecb422ec57b69!2sChandapura%2C%20Bengaluru%2C%20Karnataka%20560100!5e0!3m2!1sen!2sin!4v1697217680865!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+            © 2025 Linda Pharmaceuticals. All rights reserved.
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- Script for Sidebar Toggle -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select the elements
+        const menuButton = document.getElementById('menuButton');
+        const closeButton = document.getElementById('closeButton');
+        const sidebar = document.getElementById('sidebar');
+        const link1 = document.getElementById('link1');
+        const link2 = document.getElementById('link2');
+        const link3 = document.getElementById('link3');
+
+        // Open sidebar when menu button is clicked
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.remove('translate-x-full');
+        });
+
+        // Close sidebar when close button is clicked
+        closeButton.addEventListener('click', () => {
+            sidebar.classList.add('translate-x-full');
+        });
+
+        // Optional: Close sidebar if clicked outside
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+                sidebar.classList.add('translate-x-full');
+            }
+        });
+
+        link1.addEventListener('click', ()=>{
+            sidebar.classList.add('translate-x-full');
+        });
+
+        link2.addEventListener('click', ()=>{
+            sidebar.classList.add('translate-x-full');
+        });
+
+        link3.addEventListener('click', ()=>{
+            sidebar.classList.add('translate-x-full');
+        });
+    });
+</script>
+
+</body>
+</html>
